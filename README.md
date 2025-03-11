@@ -5,6 +5,8 @@ Project Proposal
 ----
 I plan to use the WHO's mortality database to analyze suicide rates over time by age group. My analysis will be enriched by data on economics recessions and possibly war periods in the U.S. I aim to expolore how times of crisis affect suicide rates and how these effects might vary by different age groups.
 
+War periods data could be enriched by measuring severity using the number of troops sent and connected to suicide cases by taking into account the average age of troops.
+
 Notes
 ----
 - Reported suicide rates by age: https://ourworldindata.org/grapher/suicide-rates-by-age-who-mdb?time=earliest..latest
