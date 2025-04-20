@@ -21,20 +21,20 @@ def clean_data(file_path):
     
     # Remove countries with less than 30 entries.  
 
-    counts = df['Country'].value_counts()
+    counts = df["Country"].value_counts()
     kept = counts[counts >= 30].index
-    df = df[df['Country'].isin(kept)]
+    df = df[df["Country"].isin(kept)]
     
     # Remove countries missing any years in between.  
 
-    ranges = df.groupby('Country')['Year'].agg(['min', 'max', 'count'])
-    ranges['expected_years'] = ranges['max'] - ranges['min'] + 1
-    ranges['missing_years'] = ranges['expected_years'] - ranges['count']
+    ranges = df.groupby("Country")["Year"].agg(["min", "max", "count"])
+    ranges["expected_years"] = ranges["max"] - ranges["min"] + 1
+    ranges["missing_years"] = ranges["expected_years"] - ranges["count"]
     
-    valid = ranges[ranges['missing_years'] == 0].index
-    df = df[df['Country'].isin(valid)]
+    valid = ranges[ranges["missing_years"] == 0].index
+    df = df[df["Country"].isin(valid)]
     
     return df
 
 cleaned_data = clean_data("https://ourworldindata.org/grapher/suicide-rates-by-age-who-mdb.csv?v=1&csvType=full&useColumnShortNames=false")
-cleaned_data.to_csv('suicide_data.csv', index=False)
+cleaned_data.to_csv("dsa210/suicide_data.csv", index=False)
