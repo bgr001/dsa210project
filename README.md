@@ -1,5 +1,25 @@
-# dsa210project
-A repo for my DSA210 project, term 2402.
+# Exploring the Link Between Violence Markers, Economic Shocks and Age-Specific Suicide Patterns
+## Introduction
+
+Although suicide, one of the leading causes of death globally, seems to be primarily linked with the mental state of an individual being disturbed by personal affairs, material conditions and the constant display of violence in the form of state control might play a bigger role. This study aims to explore the possible connections between age-based suicide rates and markers of violence, as well as the impact of global recessions on suicide rates. While mental health and its connection with suicide is well-studied, the role of state-sanctioned violence and conflicts is less understood. There is also a potential to reveal age-specific vulnerabilities.
+
+## Methodology
+
+The primary objective is to investigate whether structural violence exposure (conflicts, military spending, military personnel rate, police presence) and economic shocks correlate with suicide rates across countries and age groups.
+
+### 1. Data Collection
+Download the suicide rates by age, states involved in state-based conflicts, military spending as a share of gdp, military personnel as a share of total population, police officers per 1000 people datasets from Our World in Data. Recession years are hardcoded as there are only 4 officially recognized global recessions (1975, 1982, 1991, 2009) since 1950.
+
+### 2. Data Cleanup
+Merge the downloaded datasets, remove the rows with low-quality or missing data, remove countries with less than 30 entires and missing years in between their first and last entries. It should be noted that rows containing zeroes are eliminated first to filter out low-quality suicide data and police data should be merged in after any cleanup operations as it requires imputation due to missing data. Recession data is added last.
+
+// Impute police data
+
+### 3. Exploratory Data Analysis
+
+### 4. Hypothesis Testing
+
+--- Archived ---
 
 Project Proposal
 ----
