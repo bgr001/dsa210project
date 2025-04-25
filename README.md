@@ -105,13 +105,13 @@ The analysis was restricted to a handful of, mostly developed, countries, as sui
 3. `cd` into the base directory (which contains this very readme.md).
 4. Run the commands below.
 ```
-python3 data_cleanup.py
-python3 impute.py
-python3 recession.py
-python3 box_conflict.py
-python3 focus_conflict.py
-python3 military_correlation.py
-python3 military_age_correlation.py
-python3 focus_spending.py
-python3 police.py
+python3 scripts/data_cleanup.py
+python3 scripts/impute.py
+python3 scripts/recession.py
+python3 scripts/box_conflict.py
+python3 scripts/focus_conflict.py
+python3 scripts/military_correlation.py
+python3 scripts/military_age_correlation.py
+python3 scripts/focus_spending.py
+python3 scripts/police.py
 ```
