@@ -26,8 +26,6 @@ Merge the downloaded datasets, remove the rows with low-quality or missing data,
 
 At this point, it can be observed that the data for police officers per 1,000 people has many gaps, especially in the early years. Consequently, only the time period from 2000 to 2016 is taken into consideration for analyses involving the use of this dataset. The missing values in this time period are imputed using forward and backward fill by country as the observed gaps are short. The scope of this operation, along with all analyses involving police data, is restricted to the United States, the United Kingdom, and Canada to limit the number of required imputations.
 
-### 3. Exploratory Data Analysis
-
-### 4. Hypothesis Testing
+### 3. Exploratory Data Analysis and Hypothesis Testing
 
 ## Replicate this Study
