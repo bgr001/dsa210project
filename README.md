@@ -65,7 +65,7 @@ As seen in the table below, the difference in means is statistically significant
 | United States     | 251.018640          | 252.197484      | 1.004696 | 0.226009    | 4.109527e-01   | False                  |
 
 #### III. Military Spending and Personnel
-To avoid the use of a redundant variable, the Pearson correlation of these two variables is checked. A Pearson correlation score of  $0.688$ suggests that they are moderately correlated, though neither is redundant. As seen in the charts below, the two variables have almost no correlation with age-based suicide rates.
+To avoid the use of a redundant variable, the Pearson correlation of these two variables is checked. A Pearson correlation score of  $0.688$ suggests that they are moderately correlated, though neither is redundant. As seen in the charts below, the two variables have almost no apparent correlation with age-based suicide rates.
 ![bar_chart](plots/military_age_correlation.png)
 
 Instead, focus countries could provide a possibly meaningful correlation. Below are two sets of scatterplots to visualize how the suicide rates of each age group correlates with military spending per GDP and military personnel per population in focus countries.
@@ -86,12 +86,13 @@ $H_0:$ There is no correlation between the number of police officers per 1000 pe
 
 $H_A:$ There is a positive correlation between the number of police officers per 1000 people and suicide rates in the focus countries in 2000-2016. $\rho \neq 0$
 
-The results are found in the table below. There seems to be a negative trend in each country between the two variables, though only in the United States and the United Kingdom is the correlation significant (p-value < 0.05). Because statistical evidence is not significant enough in all focus countries in the specified time period, we fail to reject the null hypothesis.
+The results are found in the table below.
 | Country         | Pearson r | p-value |
 |----------------|-----------|---------|
 | United States  | -0.659    | 0.004   |
 | United Kingdom | -0.696    | 0.002   |
 | Canada         | -0.403    | 0.109   |
+There seems to be a negative trend in each country between the two variables, though only in the United States and the United Kingdom is the correlation significant (p-value < 0.05). Because statistical evidence is not significant enough in all focus countries in the specified time period, we fail to reject the null hypothesis.
 
 ## Conclusion
 While this research examined potential associations between suicide rates and economic shocks (global recessions) or violence markers (conflict status, military spending, military personnel per population, police officers per 1,000 people), no statistically significant correlations were found in the studied countries. No clear evidence suggests that suicide rates systematically vary with recessions, with or without lag, in this dataset. Neither military spending, personnel ratios, nor police density showed a meaningful relationship with suicide trends. One point to note is that an absence of correlation here does not imply these factors are irrelevant to suicide prevention; rather, their relationship may be indirect, context-dependent, or observable only under different analytical conditions.
@@ -99,3 +100,18 @@ While this research examined potential associations between suicide rates and ec
 The analysis was restricted to a handful of, mostly developed, countries, as suicide data is either scarce or low-quality in developing nations. Broader geographic, but especially historical data, might yield different insights. Unmeasured variables such as mental health policies, income inequality or wealth accumulation could influence suicide rates independently. Subsequent studies could benefit from a holistic analysis, incorporating many other variables such as domestic conflicts, into a developed country in depth.  
 
 ## Replicate this Study
+1. Clone the repository.
+2. Extract the contents if archived.
+3. `cd` into the base directory (which contains this very readme.md).
+4. Run the commands below.
+```
+python3 data_cleanup.py
+python3 impute.py
+python3 recession.py
+python3 box_conflict.py
+python3 focus_conflict.py
+python3 military_correlation.py
+python3 military_age_correlation.py
+python3 focus_spending.py
+python3 police.py
+```
