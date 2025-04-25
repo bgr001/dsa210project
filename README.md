@@ -89,5 +89,9 @@ The results are found in the table below. There seems to be a negative trend in 
 | United Kingdom | -0.696    | 0.002   |
 | Canada         | -0.403    | 0.109   |
 
+## Conclusion
+While this research examined potential associations between suicide rates and economic shocks (global recessions) or violence markers (conflict status, military spending, military personnel per population, police officers per 1,000 people), no statistically significant correlations were found in the studied countries. No clear evidence suggests that suicide rates systematically vary with recessions, with or without lag, in this dataset. Neither military spending, personnel ratios, nor police density showed a meaningful relationship with suicide trends. One point to note is that an absence of correlation here does not imply these factors are irrelevant to suicide prevention; rather, their relationship may be indirect, context-dependent, or observable only under different analytical conditions.
+
+The analysis was restricted to a handful of, mostly developed, countries, as suicide data is either scarce or low-quality in developing nations. Broader geographic, but especially historical data, might yield different insights. Unmeasured variables such as mental health policies, income inequality or wealth accumulation could influence suicide rates independently. Subsequent studies could benefit from a holistic analysis, incorporating many other variables such as domestic conflicts, into a developed country in depth.  
 
 ## Replicate this Study
