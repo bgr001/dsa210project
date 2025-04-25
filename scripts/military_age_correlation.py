@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('databases/imputed_suicide_total_data.csv')
+df = pd.read_csv('datasets/imputed_suicide_total_data.csv')
 
 age_cols = df.columns[3:18]
 
