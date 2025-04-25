@@ -78,9 +78,9 @@ The number of police officers per 1,000 population indicates, to an extent, the 
 
 Crisis intervention by the police could be playing a role in this. Though, in the design phase of this experiment, police data was chosen as a violence marker; as such, a hypothesis test can be done.
 
-$H_0:$ There is no correlation between the number of police officers per 1000 people and suicide rates in the focus countries from 2000 to 2016. $\rho = 0$
+$H_0:$ There is no correlation between the number of police officers per 1000 people and suicide rates in the focus countries in 2000-2016. $\rho = 0$
 
-$H_A:$ There is a positive correlation between the number of police officers per 1000 people and suicide rates in the focus countries from 2000 to 2016. $rho \neq 0$
+$H_A:$ There is a positive correlation between the number of police officers per 1000 people and suicide rates in the focus countries in 2000-2016. $\rho \neq 0$
 
 The results are found in the table below. There seems to be a negative trend in each country between the two variables, though only in the United States and the United Kingdom is the correlation significant (p-value < 0.05). Because statistical evidence is not significant enough in all focus countries in the specified time period, we fail to reject the null hypothesis.
 | Country         | Pearson r | p-value |
