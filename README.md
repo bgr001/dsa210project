@@ -36,7 +36,7 @@ $H_0:$ The mean suicide rate in recession years is equal to the mean suicide rat
 
 $H_A:$ The mean suicide rate in recession years is different than the mean suicide rate in non-recession years for all age groups. $\mu_{\text{rec}} \neq \mu_{\text{non-rec}}$
 
-Performing a two-sample t-test shows that the findings are statistically insignificant (each having a p value > .05); therefore, we fail to reject the null hypothesis. A snippet of these findings can be found below, while full results can be observed in the terminal output of `recession.py`.
+Performing a two-sample t-test shows that the findings are statistically insignificant (each having a p value > .05); therefore, we fail to reject the null hypothesis. A snippet of these findings can be found below, while full results can be observed in the terminal output of `recession.py`. In the case that a recession has delayed effects on suicide data, the same analysis can be conducted with a 2-year lag on suicide data following each recession. The results do not change, however.  
 | Age Group | Mean (Non-Recession) | Mean (Recession) | Ratio (Recession/Non-Recession) | T-statistic | p-value | Significant (p < 0.05) |
 |-----------|----------------------|------------------|---------------------------------|-------------|---------|------------------------|
 | 15-19     | 5.670014             | 6.009458         | 1.059867                        | 0.780788    | 0.437175 | False                  |
@@ -46,7 +46,7 @@ Performing a two-sample t-test shows that the findings are statistically insigni
 As shown below, there is not a marked increase in suicide rates in focus countries following global recessions.
 !!! IMG recession_focus_countries
 
-II. Conflict
+#### II. Conflict
 Most countries in the dataset have not been in any state-based conflicts in the year range, so conflict analysis conducted on all of the countries in the dataset leads to counterintuitive results such as below.
 !!! IMG conflict_boxplot
 Instead, focus countries can be used for further conflict analysis. Canada, except for its earlier years, has no conflict history; while the two imperial countries, the US and the UK, have plenty.
@@ -55,7 +55,7 @@ A hypothesis test can be done to determine if the differences are significant en
 
 $H_0:$ The mean suicide rate in conflict years is equal to the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} = \mu_{\text{non-con}}$
 
-$H_A:$ The mean suicide rate in conflict years is different than the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} \neq \mu_{\text{con}}$
+$H_A:$ The mean suicide rate in conflict years is different than the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} \neq \mu_{\text{non-con}}$
 
 As seen in the table below, the difference in means is statistically significant for the UK, while it is statistically insignificant for the U.S. Though, we still fail to reject the null hypothesis, as the differences are not significant enough in at least one country under investigation. 
 | Country           | Mean (Non-Conflict) | Mean (Conflict) | Ratio    | T-statistic | p-value        | Significant (p < 0.05) |
@@ -63,5 +63,5 @@ As seen in the table below, the difference in means is statistically significant
 | United Kingdom    | 133.171346          | 190.933660      | 1.433744 | 7.170544    | 4.846189e-10   | True                   |
 | United States     | 251.018640          | 252.197484      | 1.004696 | 0.226009    | 4.109527e-01   | False                  |
 
-III. 
+#### III. 
 ## Replicate this Study
