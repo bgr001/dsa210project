@@ -63,5 +63,15 @@ As seen in the table below, the difference in means is statistically significant
 | United Kingdom    | 133.171346          | 190.933660      | 1.433744 | 7.170544    | 4.846189e-10   | True                   |
 | United States     | 251.018640          | 252.197484      | 1.004696 | 0.226009    | 4.109527e-01   | False                  |
 
-#### III. 
+#### III. Military Spending and Personnel
+To avoid the use of a redundant variable, the Pearson correlation of these two variables is checked. A Pearson correlation score of  $0.688$ suggests that they are moderately correlated, though neither is redundant. As seen in the charts below, the two variables have almost no correlation with age-based suicide rates.
+!!!  IMG military_age_correlation.png
+Instead, focus countries could provide a possibly meaningful correlation. Below are two sets of scatterplots to visualize how the suicide rates of each age group correlates with military spending per GDP and military personnel per population in focus countries.
+!!! IMG focus_spending_age_correlation.png
+!!! IMG focus_personnel_age_correlation.png
+
+It can be observed in the scatterplots that there seems to be a high positive correlation between military spending / personnel and suicide rates, especially in the 60-79 age range. However, the computed Spearman and Pearson correlation coefficients appear to be extremely low despite the majorly moderate correlation observed among the plots. This extreme statistical results (infinitesimal p-values) suggest a potential data issue (possibly time-series autocorrelation where both variables follow similar long-term trends), which brings the independence of data points into question. Although it can be reasoned that rising military spending correlating with higher suicide rates could be linked to austerity measures, even such causations would unlikely lead to the observed extremities.
+
+#### IV. Police Officers
+
 ## Replicate this Study
