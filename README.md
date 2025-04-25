@@ -24,12 +24,12 @@ Download the suicide rates by age, states involved in state-based conflicts, mil
 ### 2. Data Cleanup
 Merge the downloaded datasets, remove the rows with low-quality or missing data, remove countries with less than 30 entires and missing years in between their first and last entries. It should be noted that rows containing zeroes are eliminated first to filter out low-quality suicide data and police data should be merged in after any cleanup operations as it requires imputation due to missing data. Recession data is added last.
 
-At this point, it can be observed that the data for police officers per 1,000 people has many gaps, especially in the early years. Consequently, only the time period from 2000 to 2016 is taken into consideration for analyses involving the use of this dataset. The missing values in this time period are imputed using forward and backward fill by country as the observed gaps are short. The scope of this operation, along with all analyses involving police data, is restricted to the focus countries (United States, the United Kingdom, and Canada) to limit the number of required imputations.
+At this point, it can be observed that the data for police officers per 1,000 people has many gaps, especially in the early years. Consequently, only the time period from 2000 to 2016 is taken into consideration for analyses involving the use of this dataset. The missing values in this time period are imputed using forward and backward fill by country as the observed gaps are short. The scope of this operation, along with all analyses involving police data, is restricted to the focus countries (the United States, the United Kingdom, and Canada) to limit the number of required imputations.
 
 ### 3. Exploratory Data Analysis and Hypothesis Testing
 #### I. Recession
 Plotting the mean suicide rate in recession years and non-recession years versus age groups results in the subplot on the left-hand side, while the right-hand side shows the ratio of these two rates. 
-!!! IMG RECESSION_IMPACT_BY_AGE
+![line_chart](plots/recession_impact_by_age.png) 
 It can be seen that although there is almost always an increase in suicide rates in recession years, this change is quite minimal to the point that it is nonexistent in the age group 55-59. A hypothesis test can be conducted to see whether the changes in suicide rates are statistically significant.
 
 $H_0:$ The mean suicide rate in recession years is equal to the mean suicide rate in non-recession years for all age groups. $\mu_{\text{rec}} = \mu_{\text{non-rec}}$
@@ -44,13 +44,14 @@ Performing a two-sample t-test shows that the findings are statistically insigni
 | 25-29     | 12.090031            | 13.389762        | 1.107504                        | 1.362063    | 0.177069 | False                  |
 
 As shown below, there is not a marked increase in suicide rates in focus countries following global recessions.
-!!! IMG recession_focus_countries
+![countries_line_chart](plots/recession_focus_countries.png)
 
 #### II. Conflict
 Most countries in the dataset have not been in any state-based conflicts in the year range, so conflict analysis conducted on all of the countries in the dataset leads to counterintuitive results such as below.
-!!! IMG conflict_boxplot
+![boxplot](plots/conflict_boxplot.png)
 Instead, focus countries can be used for further conflict analysis. Canada, except for its earlier years, has no conflict history; while the two imperial countries, the US and the UK, have plenty.
-!!! IMG conflict_focus
+![focus_boxplot](plots/conflict_focus.png)
+
 A hypothesis test can be done to determine if the differences are significant enough.
 
 $H_0:$ The mean suicide rate in conflict years is equal to the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} = \mu_{\text{non-con}}$
@@ -65,16 +66,19 @@ As seen in the table below, the difference in means is statistically significant
 
 #### III. Military Spending and Personnel
 To avoid the use of a redundant variable, the Pearson correlation of these two variables is checked. A Pearson correlation score of  $0.688$ suggests that they are moderately correlated, though neither is redundant. As seen in the charts below, the two variables have almost no correlation with age-based suicide rates.
-!!!  IMG military_age_correlation.png
+![bar_chart](plots/military_age_correlation.png)
+
 Instead, focus countries could provide a possibly meaningful correlation. Below are two sets of scatterplots to visualize how the suicide rates of each age group correlates with military spending per GDP and military personnel per population in focus countries.
-!!! IMG focus_spending_age_correlation.png
-!!! IMG focus_personnel_age_correlation.png
+##### Military Spending
+![facet](plots/focus_spending_age_correlation.png)
+##### Military Personnel
+![facet](plots/focus_personnel_age_correlation.png)
 
 It can be observed in the scatterplots that there seems to be a high positive correlation between military spending / personnel and suicide rates, especially in the 60-79 age range. However, the computed Spearman and Pearson correlation coefficients appear to be extremely low (some as low as $e^{-39}$) despite the majorly moderate correlation observed among the plots. Such extreme statistical results (infinitesimal p-values) suggest a potential data issue (possibly time-series autocorrelation where both variables follow similar long-term trends), which brings the independence of data points into question. Although it can be reasoned that rising military spending correlating with higher suicide rates could be linked to austerity measures, even such causations would unlikely lead to the observed extremities.
 
 #### IV. Police Officers
 The number of police officers per 1,000 population indicates, to an extent, the police presence among populations. For this dataset, due to the given reasons in section 2. Data Cleanup, only the focus countries from 2000 to 2016 are investigated. According to the plot below, there appears to be a negative correlation between suicide rates and police officers. 
-!!! IMG focus_police_correlation.png
+![scatterplot](plots/focus_police_correlation.png)
 
 Crisis intervention by the police could be playing a role in this. Though, in the design phase of this experiment, police data was chosen as a violence marker; as such, a hypothesis test can be done.
 
