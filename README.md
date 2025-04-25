@@ -92,6 +92,7 @@ The results are found in the table below.
 | United States  | -0.659    | 0.004   |
 | United Kingdom | -0.696    | 0.002   |
 | Canada         | -0.403    | 0.109   |
+
 There seems to be a negative trend in each country between the two variables, though only in the United States and the United Kingdom is the correlation significant (p-value < 0.05). Because statistical evidence is not significant enough in all focus countries in the specified time period, we fail to reject the null hypothesis.
 
 ## Conclusion
