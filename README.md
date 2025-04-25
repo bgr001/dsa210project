@@ -73,5 +73,21 @@ Instead, focus countries could provide a possibly meaningful correlation. Below 
 It can be observed in the scatterplots that there seems to be a high positive correlation between military spending / personnel and suicide rates, especially in the 60-79 age range. However, the computed Spearman and Pearson correlation coefficients appear to be extremely low (some as low as $e^{-39}$) despite the majorly moderate correlation observed among the plots. Such extreme statistical results (infinitesimal p-values) suggest a potential data issue (possibly time-series autocorrelation where both variables follow similar long-term trends), which brings the independence of data points into question. Although it can be reasoned that rising military spending correlating with higher suicide rates could be linked to austerity measures, even such causations would unlikely lead to the observed extremities.
 
 #### IV. Police Officers
+The number of police officers per 1,000 population indicates, to an extent, the police presence among populations. For this dataset, due to the given reasons in section 2. Data Cleanup, only the focus countries from 2000 to 2016 are investigated. According to the plot below, there appears to be a negative correlation between suicide rates and police officers. 
+!!! IMG focus_police_correlation.png
+
+Crisis intervention by the police could be playing a role in this. Though, in the design phase of this experiment, police data was chosen as a violence marker; as such, a hypothesis test can be done.
+
+$H_0:$ There is no correlation between the number of police officers per 1000 people and suicide rates in the focus countries from 2000 to 2016. $\rho = 0$
+
+$H_A:$ There is a positive correlation between the number of police officers per 1000 people and suicide rates in the focus countries from 2000 to 2016. $rho \neq 0$
+
+The results are found in the table below. There seems to be a negative trend in each country between the two variables, though only in the United States and the United Kingdom is the correlation significant (p-value < 0.05). Because statistical evidence is not significant enough in all focus countries in the specified time period, we fail to reject the null hypothesis.
+| Country         | Pearson r | p-value |
+|----------------|-----------|---------|
+| United States  | -0.659    | 0.004   |
+| United Kingdom | -0.696    | 0.002   |
+| Canada         | -0.403    | 0.109   |
+
 
 ## Replicate this Study
