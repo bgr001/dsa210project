@@ -24,12 +24,12 @@ Download the suicide rates by age, states involved in state-based conflicts, mil
 ### 2. Data Cleanup
 Merge the downloaded datasets, remove the rows with low-quality or missing data, remove countries with less than 30 entires and missing years in between their first and last entries. It should be noted that rows containing zeroes are eliminated first to filter out low-quality suicide data and police data should be merged in after any cleanup operations as it requires imputation due to missing data. Recession data is added last.
 
-At this point, it can be observed that the data for police officers per 1,000 people has many gaps, especially in the early years. Consequently, only the time period from 2000 to 2016 is taken into consideration for analyses involving the use of this dataset. The missing values in this time period are imputed using forward and backward fill by country as the observed gaps are short. The scope of this operation, along with all analyses involving police data, is restricted to the United States, the United Kingdom, and Canada to limit the number of required imputations.
+At this point, it can be observed that the data for police officers per 1,000 people has many gaps, especially in the early years. Consequently, only the time period from 2000 to 2016 is taken into consideration for analyses involving the use of this dataset. The missing values in this time period are imputed using forward and backward fill by country as the observed gaps are short. The scope of this operation, along with all analyses involving police data, is restricted to the focus countries (United States, the United Kingdom, and Canada) to limit the number of required imputations.
 
 ### 3. Exploratory Data Analysis and Hypothesis Testing
 #### I. Recession
 Plotting the mean suicide rate in recession years and non-recession years versus age groups results in the subplot on the left-hand side, while the right-hand side shows the ratio of these two rates. 
-!!RECESSION_IMPACT_BY_AGE
+!!! IMG RECESSION_IMPACT_BY_AGE
 It can be seen that although there is almost always an increase in suicide rates in recession years, this change is quite minimal to the point that it is nonexistent in the age group 55-59. A hypothesis test can be conducted to see whether the changes in suicide rates are statistically significant.
 
 $H_0:$ The mean suicide rate in recession years is equal to the mean suicide rate in non-recession years for all age groups. $\mu_{\text{rec}} = \mu_{\text{non-rec}}$
@@ -43,5 +43,24 @@ Performing a two-sample t-test shows that the findings are statistically insigni
 | 20-24     | 10.956867            | 11.953862        | 1.090993                        | 1.148659    | 0.254039 | False                  |
 | 25-29     | 12.090031            | 13.389762        | 1.107504                        | 1.362063    | 0.177069 | False                  |
 
-II. 
+As shown below, there is not a marked increase in suicide rates in focus countries following global recessions.
+!!! IMG recession_focus_countries
+
+II. Conflict
+Most countries in the dataset have not been in any state-based conflicts in the year range, so conflict analysis conducted on all of the countries in the dataset leads to counterintuitive results such as below.
+!!! IMG conflict_boxplot
+Instead, focus countries can be used for further conflict analysis. Canada, except for its earlier years, has no conflict history; while the two imperial countries, the US and the UK, have plenty.
+!!! IMG conflict_focus
+A hypothesis test can be done to determine if the differences are significant enough.
+$H_0:$ The mean suicide rate in conflict years is equal to the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} = \mu_{\text{non-con}}$
+
+$H_A:$ The mean suicide rate in conflict years is different than the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} \neq \mu_{\text{con}}$
+
+As seen in the table below, the difference in means is statistically significant for the UK, while it is statistically insignificant for the U.S. Though, we still fail to reject the null hypothesis, as the differences are not significant enough in at least one country under investigation. 
+| Country           | Mean (Non-Conflict) | Mean (Conflict) | Ratio    | T-statistic | p-value        | Significant (p < 0.05) |
+|-------------------|---------------------|-----------------|----------|-------------|----------------|------------------------|
+| United Kingdom    | 133.171346          | 190.933660      | 1.433744 | 7.170544    | 4.846189e-10   | True                   |
+| United States     | 251.018640          | 252.197484      | 1.004696 | 0.226009    | 4.109527e-01   | False                  |
+
+III. 
 ## Replicate this Study
