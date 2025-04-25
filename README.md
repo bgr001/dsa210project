@@ -52,6 +52,7 @@ Most countries in the dataset have not been in any state-based conflicts in the 
 Instead, focus countries can be used for further conflict analysis. Canada, except for its earlier years, has no conflict history; while the two imperial countries, the US and the UK, have plenty.
 !!! IMG conflict_focus
 A hypothesis test can be done to determine if the differences are significant enough.
+
 $H_0:$ The mean suicide rate in conflict years is equal to the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} = \mu_{\text{non-con}}$
 
 $H_A:$ The mean suicide rate in conflict years is different than the mean suicide rate in non-conflict years for both countries. $\mu_{\text{con}} \neq \mu_{\text{con}}$
