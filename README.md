@@ -11,7 +11,7 @@ Although suicide, one of the leading causes of death globally, seems to be prima
 | Military spending per GDP        | Numeric      | Country-Year         | Military spending as a share of GDP                  | [Link](https://ourworldindata.org/grapher/military-spending-as-a-share-of-gdp-sipri)         | SIPRI   | 1948–2023       |
 | Military personnel per population| Numeric      | Country-Year         | Military personnel as a share of total population    | [Link](https://ourworldindata.org/grapher/military-personnel-as-a-share-of-total-population) | COW     | 1816–2016       |
 | Police officers per 1,000 people | Numeric      | Country-Year         | Police officers per 1,000 people                     | [Link](https://ourworldindata.org/grapher/police-officers-per-1000-people)                   | OWID    | 1973–2015       |
-| Recession                        | Binary       | Year                 | — *(Not listed in sources provided)*                 | —                                                                                             | —       | —               |
+| Recession                        | Binary       | Year                 | —                  | —                                                                                             | IMF       | 1950-2020               |
 
 ## Variables
 | Variable                         | Data Type    | Based On             |
