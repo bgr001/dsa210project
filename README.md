@@ -14,7 +14,7 @@ Research Question: How do structural violence exposure (conflicts, military spen
 | Military spending per GDP        | Numeric      | Country-Year         | Military spending as a share of GDP                  | [Link](https://ourworldindata.org/grapher/military-spending-as-a-share-of-gdp-sipri)         | SIPRI   | 1948–2023       |
 | Military personnel per population| Numeric      | Country-Year         | Military personnel as a share of total population    | [Link](https://ourworldindata.org/grapher/military-personnel-as-a-share-of-total-population) | COW     | 1816–2016       |
 | Police officers per 1,000 people | Numeric      | Country-Year         | Police officers per 1,000 people                     | [Link](https://ourworldindata.org/grapher/police-officers-per-1000-people)                   | OWID    | 1973–2015       |
-| Recession                        | Binary       | Year                 | [1975, 1982, 1991, 2009]                  | Hardcoded                                                                                             | IMF       | 1950-2020               |
+| Recession                        | Binary       | Year                 | {1975, 1982, 1991, 2009}                  | Hardcoded                                                                                             | IMF       | 1950-2020               |
 
 ## Methodology and Findings
 
