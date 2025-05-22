@@ -95,6 +95,31 @@ The results are found in the table below.
 
 There seems to be a negative trend in each country between the two variables, though only in the United States and the United Kingdom is the correlation significant (p-value < 0.05). Because statistical evidence is not significant enough in all focus countries in the specified time period, we fail to reject the null hypothesis.
 
+### 4. Machine Learning
+Machine learning can be used to go beyond linear correlation and explore more complex relationships between multiple variables. In this study, it is utilized to prioritize the factors under investigation (violence markers and economic indicators) in terms of their effect on suicide rates. In order to identify the most influential factors involved, Random Forest and XGBoost are preferred because of their ability to handle a mix of numerical (Military Spending, Military Personnel, Police Officers) and categorical (Conflict status, Recession years) data while inherently providing a measure of feature importance.
+
+#### I. All Countries
+Although XGBoost handles multicollinearity well enough, Random Forest works better with it eliminated, so Military Spending and Personnel data are combined into a single predictor. To maintain a wider scope (all countries and all years in the dataset), conflict and police data are ignored for the first part of the ML analysis. Plotting predictor variables (combined military features, recession years) against importance (how good of a predictor a variable is in comparison to other variables) results in the figure below.
+
+![facet](plots/ml_all_importance.png)
+
+The figure visually compares the feature importance of the two variables in predicting the total (of age groups) suicide rate uing the two ML models across all countries and years. In both models, the military marker is the dominant, or the more important, predictor, suggesting that a joint measure of military spending and personnel per population is the primary factor among the markers for explaining variations in the total suicide rate by year. According to Random Forest, recession is not a good predictor of suicide rates at all compared to military markers, possibly indicating that its information is largely redundant. Conversely, the XGBoost model deems Recession more important. The higher importance, though still less than the military marker, suggests that Recession provides some unique information that helps XGBoost improve its predictions. This could indicate that the recessions have an effect on suicide rates not well captured by the military features, potentially signifying a nonlinear relationship or an interaction with a factor not accounted for in this research.
+
+Below can be found a scatterplot of actual vs predicted suicide rates for the two models (both of which have an RMSE around 18), where it can be visually confirmed that the metrics are widely scattered and do not follow closely the ideal line. This shows that while the previous feature analysis highlighted the relative importance of each predictor, these variables are not strong enough predictors of the total suicide rate.
+
+![facet](plots/ml_all_performance.png)
+
+#### II. Focus Countries
+To include all features discussed in this research, focus countries for the years 2000-2016 are analyzed with the same models. This time, the predictor variables are the combined military marker, conflict status, police officers per 100,000 people, and recession years. The figure below shows two feature importance plots (one for each model) side by side.
+
+![facet](plots/ml_focus_importance.png)
+
+According to the figure, both models identify that the binary markers have significantly less importance in predicting the average suicide rate for the focus countries. While Random Forest still finds the military markers to be the most important predictor, XGBoost assigns notably higher relative importance to the police officers variable. Possibly due to Canada almost never and the UK constantly being in conflict, conflict data shows no importance in predicting the variance in suicide rates. As for recession, 2009 being the only data point in this year range explains its relative unimportance.
+
+The predictive performance of the models on the test set for these focus countries was evaluated using RMSE (both with values around 0.85). These metrics are strong and are visually supported by the scatterplot below, where you can see that the points are tightly clustered around the ideal line. Although it seems as though these models, with the use of the identified features, are able to explain a substantial proportion of the variance in average suicide rates in the focus countries, the fact that the data is limited to $17 * 3 = 51$ entries could also provide an alternate, albeit negative, interpretation of such small errors and tight clusters.
+
+![facet](plots/ml_focus_performance.png)
+
 ## Conclusion
 While this research examined potential associations between suicide rates and economic shocks (global recessions) or violence markers (conflict status, military spending, military personnel per population, police officers per 1,000 people), no statistically significant correlations were found in the studied countries. No clear evidence suggests that suicide rates systematically vary with recessions, with or without lag, in this dataset. Neither military spending, personnel ratios, nor police density showed a meaningful relationship with suicide trends. One point to note is that an absence of correlation here does not imply these factors are irrelevant to suicide prevention; rather, their relationship may be indirect, context-dependent, or observable only under different analytical conditions.
 
