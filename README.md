@@ -126,10 +126,11 @@ While this research examined potential associations between suicide rates and ec
 The analysis was restricted to a handful of, mostly developed, countries, as suicide data is either scarce or low-quality in developing nations. Broader geographic, but especially historical data, might yield different insights. Unmeasured variables such as mental health policies, income inequality or wealth accumulation could influence suicide rates independently. Subsequent studies could benefit from a holistic analysis into a developed country in depth, incorporating many other variables such as domestic conflicts. 
 
 ## Replicate this Study
-1. Clone the repository.
+1. Clone this repository.
 2. Extract the contents if archived.
 3. `cd` into the base directory (which contains this very readme.md).
-4. Run the commands below.
+4a. Open the Jupyter notebook file combined_scripts.ipynb or follow the next instruction (4b).
+4b. Run the commands below.
 ```
 python3 scripts/data_cleanup.py
 python3 scripts/impute.py
@@ -140,4 +141,6 @@ python3 scripts/military_correlation.py
 python3 scripts/military_age_correlation.py
 python3 scripts/focus_spending.py
 python3 scripts/police.py
+python3 scripts/ml_all.py
+python3 scripts/ml_focus.py
 ```
