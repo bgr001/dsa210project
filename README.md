@@ -1,4 +1,4 @@
-LINK TO THE VIDEO PRESENTATION: https://drive.google.com/file/d/1RmkVfV4QmgCiMgAwLx_3sgKrK9t9AWSd/view?usp=sharing
+A link to a video presentation of the research which goes along with the report below: https://drive.google.com/file/d/1RmkVfV4QmgCiMgAwLx_3sgKrK9t9AWSd/view?usp=sharing
 
 # Exploring the Link Between Violence Markers, Economic Shocks and Age-Specific Suicide Patterns
 ## Introduction
